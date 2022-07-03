@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv">
+         
+        </div>
+        <script type="text/babel">    
+            function Show()
+            {
+                const bla=()=>alert("test")
+                return <button onClick={bla}>Click Me</button>
+            }
+           
+            class Hello extends React.Component{
+                render()
+                {
+                   return <button>Hello React with code <Show /> </button>
+                }
+            }
+            ReactDOM.render(<Hello /> , document.getElementById('mydiv'));
+        </script>
+    </body>
+</html>
